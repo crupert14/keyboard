@@ -1,0 +1,109 @@
+@keyframes detect {
+    0% {background-color: #3B444F}
+    50% {background-color: #ffffff}
+    100% {background-color: #3B444F}
+  }
+
+html, body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #3b444f;
+    overflow-y: hidden;
+}
+
+#display {
+    background-color: #2d2d2d;
+    border: 1px solid #514e4e;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#output {
+    width: 100%;
+    text-align: left;
+    background-color: #2D2D2D;
+    color: #9b9b9b;
+    font-size: 1.5em;
+}
+
+#keyboard-wrapper {
+    display: grid;
+    grid-template-rows: 4em repeat(4, 5em 0.5em);
+    margin-top: 20vh;
+    background-color: #0C0E0C;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    min-width: 1313px;
+    min-height: 432px;
+    font-family: Verdana, sans-serif;
+    color: #9b9b9b;
+    box-shadow: 10px 5px 25px black;
+    border: 5px solid #2D2D2D;
+    border-radius: 10px;
+    user-select: none;
+}
+
+.keyboard-row {
+    background: #2D2D2D;
+    display: grid;
+    column-gap: 5px;
+}
+
+.row-1 {
+    grid-template-columns: repeat(13, 1fr) 1.5fr;
+    grid-template-rows: 5em;
+}
+
+.row-2 {
+    grid-template-columns: 1.5fr repeat(13, 1fr);
+    grid-template-rows: 5em;
+}
+
+.row-3 {
+    grid-template-columns: 1.75fr repeat(11, 1fr) 1.75fr;
+    grid-template-rows: 5em;
+}
+
+.row-4 {
+    grid-template-columns: 1.9fr repeat(10, 1fr) 1.9fr;
+    grid-template-rows: 5em;
+}
+
+.row-5 {
+    grid-template-columns: repeat(4, 1fr) 5fr repeat(5, 1fr);
+    grid-template-rows: 5em;
+}
+
+.grid-item {
+    z-index: 1;
+    min-height: 100%;
+    font-size: 1.25em;
+    border: 1px solid #514e4e;
+    border-radius: 15px;
+    transition: 300ms;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.grid-item:hover {
+    cursor: pointer;
+    background-color: #535353;
+    color: #d1d1d1;
+}
+
+.grid-item:active {
+    background-color: white;
+    color: white;
+}
+
+.spacing {
+    background-color: #2D2D2D;
+}
